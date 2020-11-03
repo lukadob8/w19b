@@ -22,3 +22,5 @@ class Player:
     # def moveRight(self):
     def moveRight(self):
         self.columnPosition = self.columnPosition + 1
+
+    

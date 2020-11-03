@@ -13,13 +13,15 @@ print("-----------------------------")
 
 # TODO
 board = gameboard.GameBoard()
-player = player.Player(3, 2)
+player = player.Player(9, 2)
+
 
 while True:
     board.printBoard(player.rowPosition, player.columnPosition)
     selection = input("Make a move: ")
     if selection == "w":
         if board.checkMove(player.rowPosition - 1, player.columnPosition):
+            board.checkCoin(player.rowPosition - 1, player.columnPosition)
             player.moveUp()
     elif selection == "s":
         if board.checkMove(player.rowPosition + 1, player.columnPosition):

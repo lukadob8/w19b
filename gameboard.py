@@ -28,6 +28,54 @@ class GameBoard:
                 " ",
                 " *",
             ],
+            [
+                "*  ",
+                " ",
+                "* ",
+                "*",
+                " ",
+                "*"
+            ],
+            [
+                "*  ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " *",
+            ],
+            [
+                "*  ",
+                " ",
+                "* ",
+                "*",
+                " ",
+                "*",
+            ],
+            [
+                "*  ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " *",
+            ],
+            [
+                "*  ",
+                " ",
+                "C",
+                " ",
+                " ",
+                " *",
+            ],
+            [
+                "*  ",
+                " ",
+                " ",
+                " ",
+                " ",
+                " *",
+            ],
             ["* ", "* ", "* ", "* ", "*"],
         ]
 
@@ -52,6 +100,14 @@ class GameBoard:
         else:
             return False
 
+    def checkCoin(self, testRow, testColumn):
+        if self.board[testRow][testColumn].find("C") != -1:
+            print("You found a coin!")
+            self.board[testRow][testColumn].replace("C", " ")
+            
+
 # TODO
     # Return True if the player is in the winning column and row
     # Return False otherwise
+
+    
